@@ -35,12 +35,14 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#installation">Installations</a></li>
+        <li><a href="#understanding-folders">Understanding Folders</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#eda">EDA: A Path model to Encoding</a></li>
+    <li><a href="#model">Model</a></li>
+    <li><a href="#recomender">Recomender</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -82,6 +84,7 @@ Our overarching goal is to create an interactive visualization platform that ill
 ## Setup
 
 This section should list any major frameworks/libraries used to bootstrap this project.
+
 * Python installed on your system (Python 3.10.1 recommended).
   
 * Required Python libraries installed:
@@ -144,18 +147,7 @@ or:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-This section is under construction, thanks for your understanding.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+## Understanding the folders
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -170,8 +162,8 @@ This section is under construction, thanks for your understanding.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- CONTRIBUTING -->
-## Contributing
+<!-- EDA: A Path model to Encoding -->
+## EDA: A Path model to Encoding
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -183,6 +175,25 @@ Don't forget to give the project a star! Thanks again!
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MODEL -->
+## MODEL
+
+- [ ] Feature 1
+- [ ] Feature 2
+- [ ] Feature 3
+    - [ ] Nested Feature
+
+This section is under construction, thanks for your understanding.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- RECOMMENDER -->
+## RECOMMENDER
+
+This section is under construction, thanks for your understanding.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
