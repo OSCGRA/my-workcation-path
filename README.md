@@ -221,7 +221,10 @@ Feel free to reach out to me via email, LinkedIn, or Reddit for any inquiries, c
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* Attribution of eurostatapiclient: https://github.com/opus-42/eurostat-api-client
+* To Ainara Guerra for the project that has inspired me in this recommender: https://github.com/ainaraguerraf/final-project-ironhack-data
+* To [Isi](https://github.com/isi-mube), my lead teacher data at Ironhack for all the knowledge provided.
+* To Xisca for the SQL masterclass.
+* To my dog "Loja" who patiently waited every day longer than necessary to go for a walk.
   
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
