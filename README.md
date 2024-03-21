@@ -14,7 +14,7 @@
     <a href="https://github.com/OSCGRA/my-jobcation-path"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/OSCGRA/blue-and-gold/blob/main/Blue%20%26%20Gold%20(New).ipynb">View Demo</a> #Possible change
+    <a href="https://myjobcationpath.streamlit.app/">View Demo</a>
 
   </p>
 </div>
@@ -122,40 +122,54 @@ or:
 ### Installation
 
 1. Clone the repo
+   
    ```sh
     git clone https://github.com/OSCGRA/my-jobcation-path.git
    ```
 
-2. API Cofiguration:
+3. API Configuration:
+   
+      Create a _.py_ file like this:
+
+   ![api_key](https://github.com/OSCGRA/my-jobcation-path/assets/77927558/72f11821-8711-4e47-b552-40364d34c0e3)
+
+
+      Into these folders:
+   
+       -  my-jobcation-path/01_data_mining_phase/scrapper_app/
+       -  my-jobcation-path/02_data_cleaning_phase/01_Preprocessing&Clean/
+
+      Open it and write:
+
+      ```sh
+      api_key = GOOGLE_MAPS_API_KEY
+
+      ```
+
+      Example to call it:
+
+     ```sh
+      from api_key import GOOGLE_MAPS_API_KEY
+
+     ```
+
+     ```sh
+      API_KEY = GOOGLE_MAPS_API_KEY
+
+     ```
+     
+     ```sh
+      gmaps = googlemaps.Client(key=API_KEY)
+
+     ```
     _(IMPORTANT: This step is optional, you can use the .csv provided. You will need it if you want to restart the data provided, retrieving new data from Google Maps.)_
+
+2. Install packages:
+
+    You can open each notebook in each folder and look for other installations and repeat point 1 with them, or do it directly in the corresponding notebook.
+  
    
-  - Create an _.py_ file into these folders:
-
-              ![Sin título](https://github.com/OSCGRA/my-jobcation-path/assets/77927558/1fd1e511-c7c4-4eeb-acc0-a8206807d532)
-
-  my-jobcation-path/01_data_mining_phase/scrapper_app/
-  my-jobcation-path/02_data_cleaning_phase/01_Preprocessing&Clean/
-
-  - Example to call it:
-
-   ```sh
-    from api_key import GOOGLE_MAPS_API_KEY
-
-   ```
-   ```sh
-    # Google Maps API Key
-  API_KEY = GOOGLE_MAPS_API_KEY
-
-  # Initialize Google Maps client
-  gmaps = googlemaps.Client(key=API_KEY)
-
-   ```
-2. Install packages
-
-  You can open each notebook in each folder and look for other installations and repeat point 1 with them, or do it directly in the corresponding notebook.
-  point 1 with them, or do it directly in the corresponding notebook.
-   
-4. Follow the **Understanding the Folders** section in this README.
+3. Follow the **Understanding the Folders** section in this README.
    
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
