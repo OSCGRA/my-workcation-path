@@ -2,14 +2,14 @@
 <br />
 <div align="center">
 
-  <a href="https://github.com/OSCGRA/blue-and-gold">
+  <a href="https://github.com/OSCGRA/my-jobcation-path">
     <img src="https://raw.githubusercontent.com/OSCGRA/my-jobcation-path/master/00_images/logo.png" alt="Logo">
   </a>
 
 <h3 align="center">MY JOBCATION PATH</h3>
 
   <p align="center">
-    For a world where vacations and work sometimes merge.
+    In a world where vacations and work sometimes merge.
     <br />
     <a href="https://github.com/OSCGRA/my-jobcation-path"><strong>Explore the docs »</strong></a>
     <br />
@@ -68,8 +68,8 @@ In our ever more interconnected world, the lines between work and leisure are be
 
 <strong>Project Objective:</strong>
 
-Our overarching goal is to create an interactive app where we can select certain parameters of the travel experience we want: proximity to an urban center, proximity to a beach, rating, or some remote place.
-Depending on these parameters and the maximum distance we would like to travel to find a workspace, the app will give us different options in the form of related campgrounds and coworkings. 
+Our overarching goal is to create an interactive app where we can select certain parameters of the travel experience we want: proximity to an urban centre, proximity to a beach, rating, or some remote place.
+Depending on these parameters and the maximum distance we would like to travel to find a workspace, the app will give us different options in the form of related campgrounds and co-workings. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,43 +107,41 @@ To get a local copy up and running follow these simple example steps.
 This is an example of how to list things you need to use the software and how to install them.
 
   ```sh
-    pip install eurostatapiclient 
+    pip install -U googlemaps
+    pip install geopandas
+    pip install geopy
   ```
 or:
   ```sh
-    conda install eurostatapiclient 
+    conda install -U googlemaps
+    conda install -U geopandas
+    conda install -U googlemaps
   ```
 
 ### Installation
 
-1. API Cofiguration:
-   ```sh
-    from eurostatapiclient import EurostatAPIClient
-   
-    VERSION = '1.0'
-    FORMAT = 'json' 
-    LANGUAGE = 'en'
-   ```
-2. Clone the repo
-   ```sh
-    git clone https://github.com/OSCGRA/blue-and-gold.git
-   ```
-3. Install NPM packages
-   ```sh
-    pip install geopandas
-    pip install geoplot
-   ```
-4. Enter the dataset code from Eurostad database: (example: met_gind3)
-   ```js
-    dataset = client.get_dataset('met_gind3')
-    print(dataset.label)
-    df = dataset.to_dataframe();
-   ```
-<a href="https://ec.europa.eu/eurostat/web/main/data/database">EUROSTAT Database</a>
+1. API Cofiguration (Optional: You will need it if you want to restart the data provided, retrieving new data from Google Maps (data_mining_phase))
 
+   ```sh
+    from api_key import GOOGLE_MAPS_API_KEY
+
+   ```
+3. Clone the repo
+   ```sh
+    git clone https://github.com/OSCGRA/my-jobcation-path.git
+   ```
+4. Install packages
+
+  You can open each notebook in each folder and look for other installations and repeat point 1 with them, or do it directly in the corresponding notebook.
+  point 1 with them, or do it directly in the corresponding notebook.
+   
+6. Follow Understanding the Folders
+   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Understanding the folders
+
+
 
 <!-- ROADMAP -->
 ## Roadmap
