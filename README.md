@@ -2,23 +2,22 @@
 <br />
 <div align="center">
 
-  <a href="https://github.com/OSCGRA/blue-and-gold">
+  <a href="https://github.com/OSCGRA/my-jobcation-path">
     <img src="https://raw.githubusercontent.com/OSCGRA/my-jobcation-path/master/00_images/logo.png" alt="Logo">
   </a>
 
 <h3 align="center">MY JOBCATION PATH</h3>
 
   <p align="center">
-    For a world where vacations and work sometimes merge.
+    In a world where vacations and work sometimes merge.
     <br />
     <a href="https://github.com/OSCGRA/my-jobcation-path"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/OSCGRA/blue-and-gold/blob/main/Blue%20%26%20Gold%20(New).ipynb">View Demo</a> #Possible change
-    
+
   </p>
 </div>
-
 
 
 <!-- TABLE OF CONTENTS -->
@@ -52,31 +51,25 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-
-<div align="center">
-  <img src="https://github.com/OSCGRA/blue-and-gold/assets/77927558/c87f6c15-edc7-496e-8b61-a523f0c9b3d3"     
-   alt="Blue&Gold" width="500" height="500" class="centered-image">
-</div>
 <br />
-This data visualization project aims to explore and depict the distribution of the Blue Banana and Gold Banana in Europe, incorporating the concept of sea connectography flows. The project utilizes data provided by Eurostat and represents it within NUTS (Nomenclature of Territorial Units for Statistics) regions.
 
-The Blue Banana denotes a chain of highly urbanized and industrialized regions extending from southern England to northern Italy, traversing through Belgium, the Netherlands, Luxembourg, Germany, Switzerland, and France. The Gold Banana encompasses a broader swath of territory, encompassing regions in Spain and Portugal.
+During the summer of 2023 I left the screens and meetings to embark on a different professional experience: managing the opening of one of the glampings of an important company in Portugal. 
+An incredible experience! 
+People from all places, backgrounds and ages came to "my space". For everyone, I had some advice to give them to help them in their stay with us, families, couples, groups of friends... 
+However, there was one question that always had a "half-answer": 
 
-I(we) leverage datasets provided by Eurostat, the statistical office of the European Union, offering comprehensive socio-economic and geospatial information about Europe. This data is structured within NUTS regions, facilitating a hierarchical breakdown of territorial units for statistical analysis.
+- I need to work. Where is there a good internet connection here?
+- There isn't, try a café into the village.
 
-<strong>Integration with Sea Connectography Flows:</strong>
+<strong>Business Idea:</strong>
 
-In addition to examining the socio-economic dynamics within the Blue Banana and Gold Banana, this project incorporates the connectography flows to visualize tge influence on economic activities and regional development, by integrating  data.
 
-<strong>Exploring Conceptual Questions:</strong>
-
-**Is Blue Banana a Real Phenomenon?:** We delve into the debate surrounding the Blue Banana, examining whether it constitutes a real geographical and economic pentagram, particularly considering the inclusion of metropolitan areas like Berlin and Paris within its framework.
-
-**Relation between Blue Banana and Gold Banana:** We scrutinize the relationship between the Blue Banana and the Gold Banana, assessing whether the latter can be perceived as an extension of the former, or if they represent distinct socio-economic corridors with unique characteristics
+In our ever more interconnected world, the lines between work and leisure are becoming increasingly blurred, particularly noticeable in remote work settings. Occasionally, we face challenges in locating suitable workspaces while travelling to different places. To streamline travel arrangements for working individuals, the concept of this app emerged—an application designed to suggest accommodations in natural settings, considering the proximity of coworking spaces.
 
 <strong>Project Objective:</strong>
 
-Our overarching goal is to create an interactive visualization platform that illustrates both, conectivity and phisical, dimensions of the Blue Banana and Gold Banana regions. Through this holistic approach, we seek to uncover patterns of economic development, trade flows, cultural exchanges, political and social patterns and digital spaces complementing our understanding of land-based connectivity.
+Our overarching goal is to create an interactive app where we can select certain parameters of the travel experience we want: proximity to an urban centre, proximity to a beach, rating, or some remote place.
+Depending on these parameters and the maximum distance we would like to travel to find a workspace, the app will give us different options in the form of related campgrounds and co-workings. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -88,16 +81,20 @@ This section should list any major frameworks/libraries used to bootstrap this p
 * Python installed on your system (Python 3.10.1 recommended).
   
 * Required Python libraries installed:
+  
     - **Pandas:** [v1.3.3](https://pandas.pydata.org/)  
     - **NumPy:** [v1.21.4](https://numpy.org/)  
     - **Matplotlib:** [v3.4.3](https://matplotlib.org/)  
-    - **Seaborn:** [v0.11.2](https://seaborn.pydata.org/)  
+    - **Os:** [Latest Version](https://docs.python.org/3/library/os.html)
+    - **Sys:** [Latest Version](https://docs.python.org/3/library/sys.html)
+    - **WordCloud:** [Latest Version](https://github.com/amueller/word_cloud)
+    - **GoogleMaps:** [Latest Version](https://github.com/googlemaps/google-maps-services-python)
     - **GeoPandas:** [v0.10.2](https://geopandas.org/)
- 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+    - **Geopy:** [Latest Version](https://geopy.readthedocs.io/en/latest/)
+    - **Scikit-Learn:** [Latest Version](https://scikit-learn.org/stable/)
+    - **Streamlit:** [Latest Version](https://www.streamlit.io/)
+    - **Base64:** [Latest Version](https://docs.python.org/3/library/base64.html)
+    
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -111,43 +108,60 @@ To get a local copy up and running follow these simple example steps.
 This is an example of how to list things you need to use the software and how to install them.
 
   ```sh
-    pip install eurostatapiclient 
+    pip install -U googlemaps
+    pip install geopandas
+    pip install geopy
   ```
 or:
   ```sh
-    conda install eurostatapiclient 
+    conda install -U googlemaps
+    conda install -U geopandas
+    conda install -U googlemaps
   ```
 
 ### Installation
 
-1. API Cofiguration:
+1. Clone the repo
    ```sh
-    from eurostatapiclient import EurostatAPIClient
-   
-    VERSION = '1.0'
-    FORMAT = 'json' 
-    LANGUAGE = 'en'
+    git clone https://github.com/OSCGRA/my-jobcation-path.git
    ```
-2. Clone the repo
-   ```sh
-    git clone https://github.com/OSCGRA/blue-and-gold.git
-   ```
-3. Install NPM packages
-   ```sh
-    pip install geopandas
-    pip install geoplot
-   ```
-4. Enter the dataset code from Eurostad database: (example: met_gind3)
-   ```js
-    dataset = client.get_dataset('met_gind3')
-    print(dataset.label)
-    df = dataset.to_dataframe();
-   ```
-<a href="https://ec.europa.eu/eurostat/web/main/data/database">EUROSTAT Database</a>
 
+2. API Cofiguration:
+    _(IMPORTANT: This step is optional, you can use the .csv provided. You will need it if you want to restart the data provided, retrieving new data from Google Maps.)_
+   
+  - Create an _.py_ file into these folders:
+
+              ![Sin título](https://github.com/OSCGRA/my-jobcation-path/assets/77927558/1fd1e511-c7c4-4eeb-acc0-a8206807d532)
+
+  my-jobcation-path/01_data_mining_phase/scrapper_app/
+  my-jobcation-path/02_data_cleaning_phase/01_Preprocessing&Clean/
+
+  - Example to call it:
+
+   ```sh
+    from api_key import GOOGLE_MAPS_API_KEY
+
+   ```
+   ```sh
+    # Google Maps API Key
+  API_KEY = GOOGLE_MAPS_API_KEY
+
+  # Initialize Google Maps client
+  gmaps = googlemaps.Client(key=API_KEY)
+
+   ```
+2. Install packages
+
+  You can open each notebook in each folder and look for other installations and repeat point 1 with them, or do it directly in the corresponding notebook.
+  point 1 with them, or do it directly in the corresponding notebook.
+   
+4. Follow the **Understanding the Folders** section in this README.
+   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Understanding the folders
+
+
 
 <!-- ROADMAP -->
 ## Roadmap
