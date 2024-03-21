@@ -35,7 +35,6 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installations</a></li>
-        <li><a href="#understanding-folders">Understanding Folders</a></li>
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -169,11 +168,9 @@ or:
     You can open each notebook in each folder and look for other installations and repeat point 1 with them, or do it directly in the corresponding notebook.
   
    
-3. Follow the **Understanding the Folders** section in this README.
+3. Follow the **Roadmap** section in this README.
    
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Understanding the folders
 
 
 
