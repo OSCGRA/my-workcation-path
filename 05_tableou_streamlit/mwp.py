@@ -65,72 +65,74 @@ df_campsites['cluster'] = dbscan_optimal_campsites.labels_
 
 # Streamlit app
 def main():
+    
 
     # Page configuration
     st.set_page_config(
-        page_title='My Jobcation Path',
+        page_title='My Workcation Path',
         page_icon='🏕️',
         layout='wide'
-    )
-        
+    ) 
     # Add background image
-    st.markdown(
-        """
-        <style>
-        .reportview-container {
-            background: url('landscape_back.png') no-repeat center center fixed;
-            background-size: cover;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+    add_bg_from_local("landscape_back3.png")
     
-    add_bg_from_local("landscape_back2.png")
-
     custom_css ="""
      <style>
-    /* Cambiar el color del texto dentro del formulario */
+    /* Change text color within form fields */
     .stTextInput, .stNumberInput, .stTextArea, .stSelectbox, .stMultiSelect {
-        color: red !important;
-        font-size: 20px !important;
+        color: black !important;
+        font-size: 30px !important;
+        font-weight: bold !important;
     }
-    /* Cambiar el color de fondo de las cajas de selección */
+    /* Attempt to use more general selectors if these specific ones do not work */
+    /* Change background color of selection boxes */
+    /* Make sure mentioned classes are correct. Streamlit might change them */
     .st-af, .st-c7 {
         background-color: transparent !important;
     }
-    /* Cambiar el color y el tamaño del texto en los elementos */
+    /* Change text color and size in elements */
     .st-title, .st-form, .st-slider {
         color: purple !important;
         font-size: 30px !important;
     }
+    /* Style for containers, check if the class is still valid */
+    .css-2trqyj {
+        background-color: #f0f2f6;
+        border: 2px solid #4e2a84;
+        border-radius: 20px;
+    }
+
+    /* Adjustments for text introduced with st.write or Markdown within containers */
+    /* Again, ensure the .css-2trqyj class is correct */
+    .css-2trqyj p {
+        font-size: 30px !important;
+    }
     </style>
     """
-    st.markdown(custom_css, unsafe_allow_html=True) 
-    st.title(":blue_car: MY JOBCATION PATH :blue_car:")
-    st.markdown(custom_css, unsafe_allow_html=True) 
-    st.markdown("Enter your preferences for your adventure.")
+    
+    st.title(":camping: MY WORKCATION PATH :blue_car:")
+    st.markdown("<p style='font-size: 18px; text-align: left;'>What is this trip going to be like?</p>", unsafe_allow_html=True)
     
     # Divide Page in 2 columns:
     col1, col2 = st.columns(2)
+    # Adjust columns size:
+    left_column, right_space = st.columns((3.75, 6.25))
     
-    # User input form
+    
+    
     st.markdown(custom_css, unsafe_allow_html=True)
-    with col1:
+    # User input form
+    with left_column:
         with st.form(key='site_recommender_form'):
             user_type_input = st.selectbox("Do you want to be close to?", [""] + list(type.values()))  # Define 'type' values
             user_luxury_input = st.selectbox("Where do we spend the night?", [""] + list(luxury.values())) # Define 'luxury' values
             user_beach_input = st.selectbox("Do you want to stay near of a beach?", [""] + list(beach.values())) # Define 'beach' values
             user_wild_input = st.selectbox("Into the wild?", [""] + list(wild.values()))  # Define 'wild' values
-            user_slider_input = st.slider("How far away do you need a workspace?(km)", 0, 60)
+            user_slider_input = st.slider("How far away do you need a workspace?(km)", 0, 25)
             user_rating_input = st.slider("Rate for this experience (1-5):", 1, 5, 1)
             submit_button = st.form_submit_button(label='Get my jobcation plan!')
     
         
-
-        new_title = '<p style="color:Black; font-size: 24px; font-style: italic;">Home is not a place, it is something that you build.(Gaston de Bachelar)</p>'
-        st.markdown(new_title, unsafe_allow_html=True)
-
     # Perform predictions and show the results when the form is submitted
     with col2:
         #st.markdown(custom_css, unsafe_allow_html=True)
@@ -140,13 +142,14 @@ def main():
             # Simulated decoded values
             user_type_input = {'City': 0 ,'Town': 1 , 'Village': 2 }  # Simulated decoded values for 'user_type_input'
             user_luxury_input = {'Campsite': 0 ,'Glamping': 1 , 'Camper': 2 }  # Simulated decoded values for 'user_luxury_input'
-            user_beach_input = {'No': 0, 'Yes': 1}  # Simulated decoded values for 'user_beach_input'
-            user_wild_input = {'No': 0, 'Yes': 1}  # Simulated decoded values for 'user_destination_input'
+            user_beach_input = {'Yes': 1, 'No': 0}  # Simulated decoded values for 'user_beach_input'
+            user_wild_input = {'Yes': 1, 'No': 0}  # Simulated decoded values for 'user_destination_input'
 
 
-            # Simulated prediction model
-            user_category_encoded = 0  # Simulated user category encoded value
-            user_category = cat_sites_decoded[user_category_encoded]
+            # Vector For Cluster Asignation:
+            user_input_vector = [[user_type_input, user_luxury_input, user_beach_input, user_wild_input,user_rating_input,user_slider_input]]
+            
+            user_cluster = model.predict(user_input_vector)
 
             # Display results at the bottom of the page
             st.markdown("## Results")
@@ -178,6 +181,10 @@ def main():
         top_three_sites = sorted_sites.head(3)['name']
 
         return top_three_sites.tolist()
+
+    new_title = '<p style="color:#F85B1B; font-size: 22px; font-weight: bold; font-style: italic; text-align: center; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Home is not a place, it is something that you build. (Gaston de Bachelar)</p>'
+
+    st.markdown(new_title, unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
