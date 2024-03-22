@@ -6,7 +6,7 @@
     <img src="https://raw.githubusercontent.com/OSCGRA/my-jobcation-path/master/00_images/logo.png" alt="Logo">
   </a>
 
-<h3 align="center">MY JOBCATION PATH</h3>
+<h3 align="center">🏕️ MY JOBCATION PATH 💻</h3>
 
   <p align="center">
     In a world where vacations and work sometimes merge.
@@ -187,21 +187,20 @@ This section is under construction, thanks for your understanding.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- EDA: A Path model to Encoding -->
-## EDA: A Path model to Encoding
+<!-- EDA: A Path Model to Encoding -->
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+## EDA: A Path Model to Encoding.
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+Considering that it was necessary to make a codification to cluster the grouping of campsites. I based certain conclusions on the EDA analysis of [Our Bumble Dataset](https://ourbumble.com/european-wild-camping-database/). 
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+![Our Bumble DataSET](https://github.com/OSCGRA/my-workcation-path/assets/77927558/857d25ac-ca73-49c0-9f9e-4517d57c5ab0)
+
+This dataset includes the analysis of Craig and Joanna's trip, through more than 700 campsites, caravan parks and glamping all over Europe, as well as several columns with information and comments. 
+
+From the wordcloud analysis of those corresponding to the countries to be covered in our recommender, I was able to establish certain rules for the coding of our original dataset: wild (relative distance from a population centre.) and luxury concepts. (an ordinal category based on luxury accommodations.)
+
+We also took inspiration from their category type to develop our great circles by classifying nearby population centres as cities, towns or villages.
 
 <!-- MODEL -->
 ## MODEL
