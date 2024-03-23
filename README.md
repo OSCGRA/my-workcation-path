@@ -6,7 +6,7 @@
     <img src="https://raw.githubusercontent.com/OSCGRA/my-jobcation-path/master/00_images/logo.png" alt="Logo">
   </a>
 
-<h3 align="center">🏕️ MY JOBCATION PATH 💻</h3>
+<h3 align="center">🏕️ MY WORKCATION PATH 💻</h3>
 
   <p align="center">
     In a world where vacations and work sometimes merge.
@@ -247,8 +247,10 @@ Feel free to reach out to me via email, LinkedIn, or Reddit for any inquiries, c
 
 * To Ainara Guerra for her [project](https://github.com/ainaraguerraf/final-project-ironhack-data), an inspiration for a "crazy" idea.
 * To [Isi](https://github.com/isi-mube), my lead teacher data at Ironhack for all the knowledge provided.
+* To my classmates, for their support and kindness these months.
 * To Xisca for the SQL masterclass.
 * To my dog "Loja" who patiently waited every day longer than necessary to go for a walk.
+  
   
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
